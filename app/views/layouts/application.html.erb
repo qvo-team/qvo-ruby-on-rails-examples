@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>QvoRubyOnRailsExamples</title>
+    <title>Ejemplos Ruby on Rails QVO</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
   </head>
 
   <body>
+    <nav>
+      <%= link_to root_path, class: 'go-back' do %>
+        &lt; Volver al Inicio
+      <% end %>
+    </nav>
     <%= yield %>
+  </body>
+</html>
+
+
+<html>
+  <head>
+
+  </head>
+  <body>
+    <nav>
+      <a class="go-back" href="/">&lt; Volver al Inicio</a>
+      @section('sidebar')
+        <span class="page-title"><strong>Ejemplos</strong></span>
+      @show
+    </nav>
+    <div class='content'>
+      @if (isset($notice))
+        <div class="alert alert-danger"><strong>Error: </strong>{{ $notice }}</div>
+      @endif
+      @yield('content')
+    </div>
   </body>
 </html>
