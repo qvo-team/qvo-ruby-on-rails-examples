@@ -1,0 +1,29 @@
+
+  <h1>Éxito! 🤓</h1>
+  <p>Tu transacción se ha realizado exitosamente. Gracias por confiar en nosotros 🙂.</p>
+  <h2>Detalles de la transacción</h2>
+  <p>
+    <strong>ID de la transacción: </strong>
+    <%= @response[:id] %>
+  </p>
+  <p>
+    <strong>Fecha de la transacción: </strong>
+    <%= @response[:created_at] %>
+  </p>
+  <p>
+    <strong>Monto: </strong>
+    <%= @response[:amount] %>
+  </p>
+  <p>
+    <strong>Tipo de pago: </strong> <%= @response[:payment][:payment_type] %>
+  </p>
+  </p>
+  <%= link_to 'Volver al Inicio', root_path, class: 'btn btn-primary'%>
+  <%= link_to 'Volver al Ejemplo', charge_path, class: 'btn btn-primary'%>
+  <hr>
+  <p>Respuesta de la API:</p>
+  <pre>
+<code class="language-javascript">
+<%= @response %>
+</code>
+  </pre>
