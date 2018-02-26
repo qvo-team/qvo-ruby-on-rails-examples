@@ -20,24 +20,3 @@
     <%= yield %>
   </body>
 </html>
-
-
-<html>
-  <head>
-
-  </head>
-  <body>
-    <nav>
-      <a class="go-back" href="/">&lt; Volver al Inicio</a>
-      @section('sidebar')
-        <span class="page-title"><strong>Ejemplos</strong></span>
-      @show
-    </nav>
-    <div class='content'>
-      @if (isset($notice))
-        <div class="alert alert-danger"><strong>Error: </strong>{{ $notice }}</div>
-      @endif
-      @yield('content')
-    </div>
-  </body>
-</html>

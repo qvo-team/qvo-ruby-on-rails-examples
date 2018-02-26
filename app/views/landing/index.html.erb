@@ -1,2 +1,22 @@
-<h1>Landing#index</h1>
-<p>Find me in app/views/landing/index.html.erb</p>
+<div class="index-content">
+  <h1 class="background-title">Ejemplos</h1>
+  <div class="example-selector">
+    <div class="example-option">
+      <h3 class="title">Cobrar a tarjeta</h3>
+      <p class="lead">Realiza un cobro puntual mediante Webpay Plus.</p>
+      <%= link_to 'Ver ejemplo', '#', class: 'btn btn-primary'  %>
+    </div>
+
+    <div class="example-option">
+      <h3 class="title">Planes y suscripciones</h3>
+      <p class="lead">Crea planes de suscripción y recibe pagos automáticos con tarjetas de crédito.</p>
+      <%= link_to 'Ver ejemplo', '#', class: 'btn btn-primary'  %>
+    </div>
+
+    <div class="example-option">
+      <h3 class="title">Botón de pago y Checkout</h3>
+      <p class="lead">Brinda a tus usuarios una experiencia en constante mejora, optimizada y lista para dispositivos móviles.</p>
+      <%= link_to 'Ver ejemplo', checkout_path, class: 'btn btn-primary'  %>
+    </div>
+  </div>
+</div>
