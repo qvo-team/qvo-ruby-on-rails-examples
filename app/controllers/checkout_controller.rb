@@ -31,7 +31,7 @@ class CheckoutController < ApplicationController
 
     response = JSON.parse(response, symbolize_names: true)
 
-    if (qvo_response[:status] == 'successful')
+    if (response[:status] == 'successful')
       render json: {'status' => 'ok'}
     else
       render json: {'status' => 'fail'}

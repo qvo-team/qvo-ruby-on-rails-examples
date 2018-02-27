@@ -26,7 +26,7 @@
         amount:       "<%= @product['price'] %>",
         description:  "<%= @product['name'] %>",
         name:         'Tu Tienda',
-        image:        "<%= image_path(@product['img_path']) %>",
+        image:        "<%= image_url(@product['img_path']) %>",
 
         onSuccess: function(transaction) {
           // We check and register the transaction on our backend
@@ -35,6 +35,7 @@
             return response.ok ? response.json() : Promise.reject(response);
           })
           .then(function(response) {
+            console.log("response: ", response);
             if(response.status == 'ok') {
               // Here you can redirect the user, display another message or whatever you want!
               window.alert('Pago Completado 😁!');
@@ -43,7 +44,7 @@
             }
           })
           .catch(function(response) {
-            console.error(response);
+            console.log("response: ", response);
             window.alert('Existió un error en la verificación de la transacción');
           });
         }
