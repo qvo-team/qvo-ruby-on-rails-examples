@@ -31,7 +31,7 @@ Para realizar pagos de prueba utiliza las credenciales provistas en [nuestra doc
 ## Requisitos
 
 - [Git](https://www.atlassian.com/git/tutorials/install-git)
-- [Ruby on Rails] (https://gorails.com/setup)
+- [Ruby on Rails](https://gorails.com/setup)
 
 ## Gema importante
 Para los ejemplos se usa la Gema `http_party`. Puedes encontrar información sobre su uso en
