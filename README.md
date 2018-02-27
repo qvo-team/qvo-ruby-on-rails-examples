@@ -17,7 +17,7 @@ Los ejemplos incluidos son:
 - **Planes y suscripciones**: Se muestra de manera simple la funcionalidad de planes y suscripciones mediante un formulario selección de planes. Se asume que el cliente no existe y se registra en la plataforma eligiendo un plan. Se crearon previamente los planes en el sistema.
 - **Botón de pago y Checkout**: Se muestra de manera simple la funcionalidad del botón de pago para un producto puntual.
 
-La aplicación viene previamente configurada con credenciales para realizar pruebas de inmediato, pero puedes cambiarlas por tus propias credenciales en el archivo modificando la constante QVO_API_TOKEN de cada controlador.
+La aplicación viene previamente configurada con credenciales para realizar pruebas de inmediato, pero puedes cambiarlas por tus propias credenciales en el archivo modificando la constante API_TOKEN de cada controlador.
 
 > **OJO 👀:** Si utilizas las credenciales de tu cuenta y estas probando suscripciones, debes reemplazar los planes (PLANS) usados en SubscriptionController por los planes de tu cuenta.
 
