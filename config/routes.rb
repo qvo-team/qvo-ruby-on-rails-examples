@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+  get 'subscription', to: 'subscription#index', as: 'subscription'
+
+  post 'subscription/init', as: 'subscription_init'
+
+  get 'subscription/card_inscription_return', as: 'subscription_card_indscription_return'
+
+  get 'subscription/success/:subscription_id', to: 'subscription#success', as: 'subscription_success'
+
   root to: 'landing#index'
   get 'landing/index'
 
-  get 'charge/index', as: 'charge'
+  get 'charge', to: 'charge#index', as: 'charge'
   post 'charge/pay', as: 'charge_pay'
   get 'charge/return_after_form'
 

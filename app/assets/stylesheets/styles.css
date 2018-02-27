@@ -11,9 +11,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   background-attachment: fixed;
-  height: 100%;
-  margin: 0;
-}
+  height: 100%; }
 
 button {
   font-family: 'Lato', sans-serif; }

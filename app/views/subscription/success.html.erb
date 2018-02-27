@@ -1,0 +1,40 @@
+<h1>Éxito! 🤓</h1>
+  <p>
+    Felicitaciones <%= @response[:customer][:name] %>, estás suscrito a <%= @response[:plan][:name] %> 🙂.
+  </p>
+  <h2>Detalles del plan</h2>
+  <p>
+    <strong>Plan:</strong> <%= @response[:plan][:name] %>
+  </p>
+  <p>
+    <strong>Precio:</strong>
+    <%= @response[:plan][:currency] %> <%= @response[:plan][:price] %> /<%= @response[:plan][:interval] %>
+  </p>
+  <h2>Detalles de la transacción</h2>
+  <p>
+    <strong>Monto:</strong>
+    <%= @response[:transactions].first[:amount] %>
+  </p>
+
+  <p>
+    <strong>Moneda:</strong>
+    <%= @response[:plan][:currency] %>
+  </p>
+  <p>
+    <strong>Fecha:</strong>
+    <%= @response[:created_at] %>
+  </p>
+  <p>
+    <strong>Descripción:</strong>
+    <%= @response[:transactions].first[:description] %>
+  </p>
+  <%= link_to 'Volver al Inicio', root_path, class: 'btn btn-primary'%>
+  <%= link_to 'Volver al Ejemplo', subscription_path, class: 'btn btn-primary'%>
+  <hr>
+  <p>Respuesta de la API:</p>
+  <pre data-src="prism.js" class='language-javascript'>
+<code>
+<%= JSON.pretty_generate(@response) %>
+</code>
+  </pre>
+
