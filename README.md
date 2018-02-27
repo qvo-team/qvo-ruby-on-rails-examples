@@ -9,7 +9,7 @@
 </h1>
 
 
-Este repositorio contiene una aplicación Laravel con ejemplos de funcionalidades de la [API QVO](https://docs.qvo.cl).
+Este repositorio contiene una aplicación Ruby on Rails con ejemplos de funcionalidades de la [API QVO](https://docs.qvo.cl).
 
 Los ejemplos incluidos son:
 
